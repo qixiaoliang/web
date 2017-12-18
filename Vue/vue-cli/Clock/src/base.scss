@@ -1,0 +1,73 @@
+.actionButton {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    fill: white;
+    animation: scale 1.2s ease;
+    background: #5dd4e9;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.actionButton:hover {
+    transition: all 1s;
+    background: #9ec2e6;
+    transform: scale(1.15);
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(.3);
+        opacity: .6;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1.0;
+    }
+}
+
+.timerText {
+    color: white;
+    transition: all 1s;
+}
+
+.timerText-normal {
+    font-size: 2.3em;
+}
+
+.timerText-large {
+    font-size: 3.3em;
+}
+
+.timerText-largest {
+    font-size: 4.3em;
+}
+
+.actionText {
+    font-size: .8em;
+    color: white;
+    opacity: .86;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.actionText:hover {
+    opacity: 1.0;
+    transform: scale(1.1);
+}
+
+@keyframes blink {
+    0% {
+        opacity: .3;
+    }
+    60% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: blink 1.3s ease infinite .3s;
+}
