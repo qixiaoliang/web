@@ -47,6 +47,10 @@
             timer: {
                 type: Object,
                 required: true
+            },
+            pause: {
+                type: Boolean,
+                default: false
             }
         },
         data () {
@@ -56,8 +60,7 @@
                 totalTime: Object.assign( {}, this.timer ),
                 flyShow: false,
                 progress: 0,
-                timerTextCls: '',
-                pause: false
+                timerTextCls: ''
             }
         },
         methods: {
