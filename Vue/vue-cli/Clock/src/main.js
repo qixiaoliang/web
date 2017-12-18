@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import './base.scss';
 import '../src/assets/svgxuse';
-import VueTouch from 'vue2-touch';
+
 
 Vue.config.productionTip = false
 Vue.use( VueTouch );
