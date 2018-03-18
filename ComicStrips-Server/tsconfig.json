@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"sourceMap": true,
+		"watch": true,
+		"outDir": "./distJs",
+		"strict": true,
+		"module": "commonjs",
+		"target": "es2017",
+		"moduleResolution": "node",
+		"noEmitOnError": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"lib": [
+			"es7"
+		],
+		"declaration": true,
+		"declarationDir": "./dist/declarations"
+	},
+	"exclude": [
+		"./node_modules","./distJs","./src","./template","./log"
+	],
+	"files": [
+		"./ts/index.ts"
+	]
+}

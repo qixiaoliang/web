@@ -1,0 +1,38 @@
+{
+  "name": "comicstrips-server",
+  "version": "1.0.0",
+  "description": "Comic Strips Server",
+  "main": "index.js",
+  "scripts": {
+    "debug": "node --inspect ./distJs/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zcgzxg",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "cheerio": "^1.0.0-rc.2",
+    "ejs": "^2.5.7",
+    "joi": "^13.1.0",
+    "jsonwebtoken": "^8.1.0",
+    "koa": "^2.4.1",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.3.0",
+    "koa-static-cache": "^5.1.1",
+    "koa2-validation": "^0.1.0",
+    "mysql2": "^1.5.1",
+    "node-fetch": "^1.7.3",
+    "nodemailer": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.4",
+    "@types/cheerio": "^0.22.7",
+    "@types/ejs": "^2.5.0",
+    "@types/formidable": "^1.0.30",
+    "@types/joi": "^13.0.5",
+    "@types/koa": "^2.0.43",
+    "@types/koa-router": "^7.0.27",
+    "@types/node": "^9.3.0",
+    "@types/nodemailer": "^4.3.1"
+  }
+}
