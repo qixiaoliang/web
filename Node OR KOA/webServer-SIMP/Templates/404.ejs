@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>
+            <%= docTitle %>
+        </title>
+        <style>
+            ul {
+                font-size: large;
+            }
+        </style>
+        <script>
+            var ws = new WebSocket(
+                'ws://' + location.host + '/io'
+            )
+            ws.onmessage = function ( e ) {
+                location.reload( true );
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>
+            <%= title %>
+        </h1>
+        <ul>
+            <% for(var i=0;i<handles.length;i++){ %>
+                <li>
+                    <%= handles[i] %>
+                </li>
+                <% } %>
+        </ul>
+    </body>
+
+</html>

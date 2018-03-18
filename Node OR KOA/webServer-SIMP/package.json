@@ -1,0 +1,30 @@
+{
+  "name": "tuliprope",
+  "scripts": {
+    "debug": "node --debug --inspect webServer-SIMP/index.js"
+  },
+  "pkg": {
+    "assets": [
+      "/webServerSIMP/js",
+      "/webServerSIMP/Templates"
+    ]
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "koa": "^2.4.1",
+    "koa-static": "^4.0.1",
+    "useragent.js": "^0.5.6",
+    "watch": "^1.0.2",
+    "ws": "^3.3.1"
+  },
+  "version": "1.0.0",
+  "description": "simple hot replace web server",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [
+    "web",
+    "server"
+  ],
+  "author": "tuliprope",
+  "license": "ISC"
+}
