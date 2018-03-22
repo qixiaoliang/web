@@ -148,12 +148,12 @@ class RegisterOrSignIn extends React.Component<StyleProps, {}> {
 	}
 }
 
-let _RegisterOrSignIn = withStyles<ClassKey>( styles )<Props>( RegisterOrSignIn );
-export default _RegisterOrSignIn;
+let Ros = withStyles<ClassKey>( styles )<Props>( RegisterOrSignIn );
+export default Ros;
 
 export function ShowSignIn( close?: () => void ) {
 	ReactDOM.render(
-		<_RegisterOrSignIn close={ ( node: React.Component ) => {
+		<Ros close={ ( node: React.Component ) => {
 			ReactDOM.unmountComponentAtNode(
 				document.getElementById( 'modal' )
 			);
