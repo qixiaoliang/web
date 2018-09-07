@@ -1,0 +1,77 @@
+/* .treeSelector .itemContainer{
+
+} */
+
+.search{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    justify-content: start;
+}
+.search>input{
+    width: 200px;
+    height: 26px;
+    margin-left: 10px;
+}
+.icon-sousuo{
+    display: block;
+    transform: translateX(-140%);
+    font-size: 16px;
+}
+
+.treeSelector .itemText{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    transition: background .5s ease;
+    padding:5px 8px;
+}
+.itemText.itemSelect, .itemText:active{
+    background: rgb(236, 217, 217,0.8);
+    border-radius:6px;
+}
+
+.treeSelector .caret{
+    margin-right: 11px;
+    font-size: 18px;
+    color:rgb(8, 34, 8);
+    animation: Rotate .5s ease forwards;
+    display: inline-block;
+    font-weight: 403;
+}
+.treeSelector .caret-expand{
+    animation: Rotate .5s ease reverse forwards;
+}
+
+.treeSelector .icon-folder{
+    font-size: 20px;
+    margin-right: 8px;
+    font-weight: 403;
+}
+.icon-folder-green{
+    color:rgb(129, 221, 129);
+}
+.icon-folder-pink{
+    color:rgba(235, 150, 164, 0.884);
+}
+
+@keyframes Rotate{
+    0%{
+        transform: rotate(90deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes SlideIn{
+    0%{
+        transform: scaleY(50%);
+    }
+    100%{
+        transform: scaleY(50%);
+    }
+}

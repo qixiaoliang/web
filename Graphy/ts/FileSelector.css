@@ -1,0 +1,68 @@
+input[type="checkbox"]{
+    width:14px;
+    height:14px;
+    margin-right: 2px;
+}
+
+.fileRoot{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:100%;
+}
+
+.fileList .file{
+    display:flex;
+    font-size: 13px;
+    font-weight: 400;
+    align-items: center;
+    margin:9px 0;
+}
+.icon-pdf{
+    color:rgb(192, 134, 80);
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.confirm{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: -53px;
+}
+.confirm>.selectChange{
+    margin-left: 32px;
+    font-size: 16px;
+    display: flex;
+}
+.confirm>.selectChange span{
+    font-size: 13px;
+}
+.confirm>.selectChange>div{
+    display: flex;
+    align-items: center;
+}
+.confirm>.selectChange>div:last-child{
+    margin-left: 22px;
+}
+
+.confirm button{
+    width:70px;
+    height:32px;
+    font-size: 13px;
+    border-radius: 3px;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.confirm .primary{
+    background: #666666;
+    margin-left: 10px;
+}
+.confirm .primary:enabled:hover,
+.confirm .primary:active{
+    background: #666666aa;
+}
+.confirm button:disabled{
+    cursor: not-allowed;
+    background: #666666;
+}

@@ -1,0 +1,50 @@
+#app,body,html{
+    height:100%;
+}
+#app{
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "微软雅黑 Regular","微软雅黑";
+    color:#333333;
+    font-size: 13px;
+    background: #F2F2F2;
+}
+.header>p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 680px;
+    height: 600px;
+    background: white;
+}
+hr{
+    height:2px;
+    width:680px;
+    padding:0;
+    margin:0;
+}
+hr.vertical{
+    width:2px;
+    height: 481px;
+    margin:0 2px;
+}
+.panels{
+    display: flex;
+    flex-direction: row;
+}
+.left{
+    padding-left: 10px;
+    height:481px;
+}
+.right{
+    margin-left: 2px;
+    flex:1;
+    height:481px;
+}
