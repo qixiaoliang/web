@@ -1,18 +1,65 @@
-import FanDiagram, { GraphyProps } from './FanDiagram';
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import TreeSelect from './TreeSelect';
+import { DataType } from './TreeSelect';
+import './main.css';
+import '../src/iconfont.css';
+import data from './Data';
+import { ExampleDataType } from './Data';
+import FileSelector from './FileSelector';
 
-const describes: GraphyProps['describes'] = [
-    { percent: 22, color: 'pink', describe: 'this is pink color' },
-    { percent: 12, color: 'green', describe: 'this is green color' },
-    { percent: 8, color: 'lime', describe: 'this is lime color' },
-    { percent: 58, color: 'orange', describe: 'this is orange color' }
-]
+class Test extends React.Component {
+    data: DataType[] = this.format( data );
+    format( data: ExampleDataType[] ) {
+        let o: DataType[] = [];
+        const render = ( files: string[] ) => () => {
+            this.setState( {
+                content: <FileSelector files={ files.map( f => ( f + '  ' ).repeat( 3 ) ) }>
+                </FileSelector>
+            } )
+        }
 
-render(
-    <FanDiagram
-        size={240}
-        describes={describes}
-    />,
+        data.forEach( d => {
+            if ( d.files ) {
+                o.push( {
+                    text: d.name,
+                    expand: false,
+                    render: render( d.files ).bind( this )
+                } )
+            }
+            else {
+                o.push( {
+                    text: d.name,
+                    expand: false,
+                    children: this.format( d.folders )
+                } )
+            }
+        } )
+        return o;
+    }
+
+    state = {
+        content: <div></div>
+    }
+    render() {
+        return <div className="container">
+            <div className="header">
+                <p>选择文件</p>
+            </div>
+            <hr />
+            <div className="panels">
+                <TreeSelect data={ this.data } />
+                <hr className="vertical"/>
+                <div className="right">
+                    { this.state.content }
+                </div>
+            </div>
+            <hr/>
+        </div>
+    }
+}
+ReactDOM.render(
+    <Test></Test>,
     document.getElementById( 'app' )
 )
+
