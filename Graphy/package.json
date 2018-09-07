@@ -2,7 +2,7 @@
   "name": "recruit",
   "version": "1.0.0",
   "description": "recruit site",
-  "main": "./ts/main.ts",
+  "main": "./ts/main.tsx",
   "dependencies": {
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
