@@ -1,4 +1,5 @@
 /// <reference types="react" />
+// import React
 import React from 'react';
 export declare type GraphyProps = {
     /**
