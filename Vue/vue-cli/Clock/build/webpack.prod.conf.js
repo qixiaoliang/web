@@ -28,7 +28,7 @@ const webpackConfig = merge( baseWebpackConfig, {
 		path: config.build.assetsRoot,
 		filename: utils.assetsPath( 'js/[name].[chunkhash].js' ),
 		chunkFilename: utils.assetsPath( 'js/[id].[chunkhash].js' ),
-		publicPath: '/clock/'
+		publicPath: '/'
 	},
 	plugins: [
 		// http://vuejs.github.io/vue-loader/en/workflow/production.html
@@ -64,6 +64,7 @@ const webpackConfig = merge( baseWebpackConfig, {
 		new HtmlWebpackPlugin( {
 			filename: config.build.index,
 			template: 'index.html',
+			favicon:'./src/assets/favicon.ico',
 			inject: true,
 			minify: {
 				removeComments: true,
